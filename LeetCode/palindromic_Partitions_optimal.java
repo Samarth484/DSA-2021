@@ -13,11 +13,11 @@ public class palindromic_Partitions_optimal {
 
 	public static List<List<String>> partition(String str) {
 		List<List<String>> result = new ArrayList<List<String>>();
-		partitionLogic(str, 0, "", new ArrayList<String>(), result);
+		partitionLogic(str, 0, new ArrayList<String>(), result);
 		return result;
 	}
 
-	private static void partitionLogic(String ques, int vidx, String ans, ArrayList<String> partition,
+	private static void partitionLogic(String ques, int vidx, ArrayList<String> partition,
 			List<List<String>> parList) {
 		if (ques.length() == vidx) {
 			parList.add(new ArrayList<String>(partition));
@@ -28,7 +28,7 @@ public class palindromic_Partitions_optimal {
 			if (isPalindrome(remaining)) {
 //				String roq = ques.substring(i + 1);
 				partition.add(remaining);
-				partitionLogic(ques, i, ans, partition, parList);
+				partitionLogic(ques, i, partition, parList);
 				partition.remove(partition.size() - 1);
 			}
 		}
