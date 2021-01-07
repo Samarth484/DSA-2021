@@ -17,8 +17,7 @@ public class palindromic_Partitions_optimal {
 		return result;
 	}
 
-	private static void partitionLogic(String ques, int vidx, ArrayList<String> partition,
-			List<List<String>> parList) {
+	private static void partitionLogic(String ques, int vidx, ArrayList<String> partition, List<List<String>> parList) {
 		if (ques.length() == vidx) {
 			parList.add(new ArrayList<String>(partition));
 			return;
@@ -26,7 +25,6 @@ public class palindromic_Partitions_optimal {
 		for (int i = vidx + 1; i <= ques.length(); i++) {
 			String remaining = ques.substring(vidx, i);
 			if (isPalindrome(remaining)) {
-//				String roq = ques.substring(i + 1);
 				partition.add(remaining);
 				partitionLogic(ques, i, partition, parList);
 				partition.remove(partition.size() - 1);
