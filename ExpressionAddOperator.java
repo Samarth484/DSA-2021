@@ -12,7 +12,7 @@ public class ExpressionAddOperator {
 	public static void main(String[] args) {
 		System.out.println("Enter the number");
 		int num = scn.nextInt();
-//		int num = 258;
+//		int num = 123;
 		System.out.println("Enter the target");
 		int tar = scn.nextInt();
 //		int tar = 6;
@@ -50,6 +50,7 @@ public class ExpressionAddOperator {
 //		addOperators(num, idx + 1, vsf, target, expsf + num1 + " * ", list);
 //
 //	}
+	
 //	private static int addOperators(String num, int idx, int vsf, int target, String expsf, List<String> list) {
 //		if (idx == num.length() - 1) {
 //			return num.charAt(idx) - '0';
@@ -103,24 +104,7 @@ public class ExpressionAddOperator {
 		}
 
 		int num1 = num.charAt(idx) - '0';
-//
-//		if (idx == 0)
-//			vsf = 1;
-//
-//		if (idx == num.length() - 1)
-//			addOperators(num, idx + 1, vsf * num1, target, expsf + num1, list);
-//		else
-//			addOperators(num, idx + 1, vsf * num1, target, expsf + num1 + " * ", list);
-//
-//		if (idx == num.length() - 1)
-//			addOperators(num, idx + 1, vsf + num1, target, expsf + num1, list);
-//		else
-//			addOperators(num, idx + 1, vsf + num1, target, expsf + num1 + " + ", list);
-//
-//		if (idx == num.length() - 1)
-//			addOperators(num, idx + 1, vsf - num1, target, expsf + num1, list);
-//		else
-//			addOperators(num, idx + 1, vsf - num1, target, expsf + num1 + " - ", list);
+		
 
 		if (idx == 0)
 			addOperators(num, idx + 1, num1, target, expsf + num1, list);
@@ -134,4 +118,3 @@ public class ExpressionAddOperator {
 	}
 
 }
-
